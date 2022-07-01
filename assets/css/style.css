@@ -19,6 +19,10 @@ body {
     background: #f8f9fa
 }
 
+.form-control {
+    font-size: 12px;
+}
+
 .signin_animation {
     animation: fadeInUpBig; 
     animation-duration: 1s;
