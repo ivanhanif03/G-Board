@@ -1,11 +1,12 @@
-setTimeout(() => {
-    const preloader = document.getElementById('preloader');
+//TOGGLE PASSWORD HIDE SHOW
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#password");
 
-    preloader.style.display = 'none';
-}, 4000);
-
-setTimeout(() => {
-    const loginPage = document.getElementById('loginPage');
-
-    loginPage.style.display = 'block';
-}, 4000);
+togglePassword.addEventListener("click", function () {
+  // Toggle the type attribute
+  const type = password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+  // Toggle the eye icon
+  this.classList.toggle('bi-eye');
+  this.classList.toggle('bi-eye-fill');
+});

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/img/gboard-logo.png">
+    
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />    
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Manrope'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container signup_animation mt-2">
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-0 rounded-3">
+                    <div class="card-body">
+                        <a href="signin.html" class="btn" style="background-color:rgb(255, 240, 157) ;"><i class="bi bi-arrow-left fw-bolder"></i></a>
+                        <img src="assets/img/signup-icon.svg" class="card-img-top mb-3 mt-3 ps-4 pe-4" alt="">
+                        <form class="needs-validation" novalidate>
+                            <h6 class="card-title fw-bolder mb-4">Data Pribadi</h6>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold">Email</label>
+                                <input type="email" class="form-control border-0 bg-light" id="email" required>
+                                <div class="invalid-feedback">
+                                    Mohon masukkan email yang valid
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-bold">Password</label>
+                                <div class="input-group mb-3">
+                                    <input id="password" type="password" name="password" class="form-control border-0 bg-light" minlength="6" required>
+                                    <span  class="btn bg-light"><i id="togglePassword" class="bi bi-eye"></i></span>
+                                    <div class="invalid-feedback">
+                                        Password minimal 6 karakter
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="full_name" class="form-label fw-bold">Nama Lengkap</label>
+                                <input type="text" class="form-control border-0 bg-light" id="full_name" required>
+                                <div class="invalid-feedback">
+                                    Mohon masukkan nama lengkap
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="birth_date" class="form-label fw-bold">Tanggal Lahir</label>
+                                <input type="date" class="form-control border-0 bg-light" id="birth_date" required>
+                                <div class="invalid-feedback">
+                                    Mohon masukkan tanggal lahir
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone_number" class="form-label fw-bold">Nomor Handphone</label>
+                                <input type="text" class="form-control border-0 bg-light" id="phone_number" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" minlength="10" required>
+                                <div class="invalid-feedback">
+                                    Mohon masukkan nomor handphone
+                                </div>
+                            </div>
+                            <h6 class="card-title fw-bolder mb-3 mt-4">Data Pekerjaan</h6>
+                            <p class="p-3 rounded-3" style="background-color:lemonchiffon;">Silahkan isi Data Pekerjaa sesuai informasi yang kamu terima lewat email atau silahkan hubungi HCGA Head/Tim Recruitment jika ada yang kurang jelas. <br><br>Mohon dipastikan semua form diisi dengan benar dan sesuai untuk menghindari kendala dalam pengerjaan Onboarding.</p>
+                            <div class="mb-3">
+                                <label for="nik" class="form-label fw-bold">Nomor Induk Karyawan</label>
+                                <input type="text" class="form-control border-0 bg-light" id="nik" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" required>
+                                <div class="invalid-feedback">
+                                    Mohon masukkan nomor induk karyawan
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="join_date" class="form-label fw-bold">Tanggal Masuk</label>
+                                <input type="date" class="form-control border-0 bg-light" id="join_date" required>
+                                <div class="invalid-feedback">
+                                    Mohon masukkan tanggal masuk
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="area" class="form-label fw-bold">Area/Divisi</label>
+                                <select class="form-select select-area" id="area" data-placeholder="Pilih Area/Divisi" required>
+                                    <option></option>
+                                    <option>Head Office</option>
+                                    <option>Bali Regional</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Mohon pilih area/divisi
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="area" class="form-label fw-bold">Cabang/Dept</label>
+                                <select class="form-select select-cabang" id="cabang" data-placeholder="Pilih Cabang/Dept" required>
+                                    <option></option>
+                                    <option>Head Office</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Mohon pilih cabang/dept
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="area" class="form-label fw-bold">Jabatan</label>
+                                <select class="form-select select-jabatan" id="jabatan" data-placeholder="Pilih Jabatan" required>
+                                    <option></option>
+                                    <option>Staff</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Mohon pilih jabatan
+                                </div>
+                            </div>
+                            <button type="submit" data-bs-toggle="modal" data-bs-target="#modalRegister" class="btn btn-lg btn-warning text-white fs-6 col-12" style="border-radius: 8px;">Daftar</button>
+                            <div class="text-center mt-4">
+                                <div class="form-text" for="registration">Sudah punya akun? <a href="signin.html" class="fw-bold text-decoration-none">Sign In disini</a> </div>    
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Modal Register -->
+<div class="modal fade" id="modalRegister" tabindex="-1" aria-labelledby="modalRegister" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img src="assets/img/register-ok.gif" width="200" alt="">
+                <h5 class="fw-bolder mt-4">Akun berhasil dibuat!</h5>
+                <p>Silahkan login kembali</p>
+                <a href="signin.html" type="button" class="btn btn-warning text-white mt-2">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SELECT 2 -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<!-- JS -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/index.js"></script>
+
+<!-- Select 2  Usage-->
+<script>
+    $( '#area' ).select2( {
+        theme: "bootstrap-5",
+        width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+        placeholder: $( this ).data( 'placeholder' ),
+    } );
+    $( '#cabang' ).select2( {
+        theme: "bootstrap-5",
+        width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+        placeholder: $( this ).data( 'placeholder' ),
+    } );
+    $( '#jabatan' ).select2( {
+        theme: "bootstrap-5",
+        width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+        placeholder: $( this ).data( 'placeholder' ),
+    } );
+</script>
+
+<!-- Validation -->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+        }, false)
+        })
+    })()
+</script>
+</html>

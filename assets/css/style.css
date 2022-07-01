@@ -4,14 +4,34 @@ body {
     background-color: #ffffff;
 }
 
-.login_animation {
+.select-area + .select2-container .select2-selection {
+    border: 0;
+    background: #f8f9fa
+}
+
+.select-cabang + .select2-container .select2-selection {
+    border: 0;
+    background: #f8f9fa
+}
+
+.select-jabatan + .select2-container .select2-selection {
+    border: 0;
+    background: #f8f9fa
+}
+
+.signin_animation {
+    animation: fadeInUpBig; 
+    animation-duration: 1s;
+}
+
+.signup_animation {
     animation: fadeInUpBig; 
     animation-duration: 1s;
 }
 
 .screenloader {
-    -webkit-animation: fadeinout 4s linear forwards;
-    animation: fadeinout 4s linear forwards;
+    -webkit-animation: fadeinout 3s linear forwards;
+    animation: fadeinout 3s linear forwards;
 }
 
 @-webkit-keyframes fadeinout {
