@@ -4,6 +4,14 @@ body {
     background-color: #ffffff;
 }
 
+small {
+    font-size: 12px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: #f4f4f4;
+}
+
 .card {
     border-radius: 10px;
 }
