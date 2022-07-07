@@ -4,6 +4,10 @@ body {
     background-color: #ffffff;
 }
 
+.card {
+    border-radius: 10px;
+}
+
 .select-area + .select2-container .select2-selection {
     border: 0;
     background: #f8f9fa
