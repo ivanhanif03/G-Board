@@ -14,14 +14,13 @@ html *::after {
 
 }
 
-
-
 .menu{
-    margin: 0;
+    max-width: 450px;
+    margin: auto;
     display: flex;
     /* Works well with 100% width  */
     width: 100%;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 1em 2.85em;
     position: relative;
     align-items: center;

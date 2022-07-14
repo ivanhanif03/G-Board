@@ -1,15 +1,25 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Manrope'; 
+    font-family: 'Poppins'; 
     font-size: 14px;
     background-color: #ffffff;
 }
 
 small {
     font-size: 12px;
+    color: #8f8f8f;
 }
 
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    background-color: #f4f4f4;
+p {
+    font-size: 12px;
+}
+
+.container {
+    max-width: 450px;
+    background: white;
 }
 
 .card {
