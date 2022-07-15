@@ -5,7 +5,7 @@
 "use strict"; 
 
 const body = document.body;
-const bgColorsBody = ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff"];
+const bgColorsBody = ["#f2f2f2", "#f2f2f2", "#f2f2f2", "#f2f2f2", "#f2f2f2"];
 const menu = body.querySelector(".menu");
 const menuItems = menu.querySelectorAll(".menu__item");
 const menuBorder = menu.querySelector(".menu__border");

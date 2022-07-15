@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit Profile</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/img/gboard-logo.png">
+
+    <!-- CDN -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/scroll-up-button.css">
+
+    <!-- CUSTOM CSS -->
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 35vw;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container p-3">
+        <!-- BACK BUTTON -->
+        <a href="profile.html" class="btn mb-3" style="background:#fff3d0;"><i
+                class="bi bi-arrow-left fw-bolder"></i></a>
+
+        <!-- USER PROFILE -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-0">
+                    <div class="mb-2 d-flex justify-content-center">
+                        <h5 class="fw-bolder">Profile</h5>
+                    </div>
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mt-3 mb-3" width="90"
+                            src="https:/source.unsplash.com/50x50?man" alt="">
+                        <div>
+                            <b>Muhammad Ivan Hanif</b><br>
+                            <small>Learning Infrastructure Officer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- EDIT PROFILE -->
+        <div class="row">
+            <div class="col-12">
+                <form class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="nik" class="form-label fw-bold">Nomor Induk Karyawan</label>
+                        <input type="text" class="form-control border-0 bg-light" id="nik"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"
+                            required>
+                        <div class="invalid-feedback">
+                            Mohon masukkan nomor induk karyawan
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="full_name" class="form-label fw-bold">Nama</label>
+                        <input type="text" class="form-control border-0 bg-light" id="full_name" required>
+                        <div class="invalid-feedback">
+                            Mohon masukkan nama lengkap
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold">Email</label>
+                        <input type="email" class="form-control border-0 bg-light" id="email" required>
+                        <div class="invalid-feedback">
+                            Mohon masukkan email yang valid
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone_number" class="form-label fw-bold">Nomor Handphone</label>
+                        <input type="text" class="form-control border-0 bg-light" id="phone_number"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"
+                            minlength="10" required>
+                        <div class="invalid-feedback">
+                            Mohon masukkan nomor handphone
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nik" class="form-label fw-bold">Nomor Induk Karyawan Atasan</label>
+                        <input type="text" class="form-control border-0 bg-light" id="nik"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"
+                            required>
+                        <div class="invalid-feedback">
+                            Mohon masukkan nomor induk karyawan atasan
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="area" class="form-label fw-bold">Jabatan</label>
+                        <select class="form-select select-jabatan" id="jabatan" data-placeholder="Pilih Jabatan"
+                            required>
+                            <option></option>
+                            <option>Staff</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Mohon pilih jabatan
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="area" class="form-label fw-bold">Area/Divisi</label>
+                        <select class="form-select select-area" id="area" data-placeholder="Pilih Area/Divisi" required>
+                            <option></option>
+                            <option>Head Office</option>
+                            <option>Bali Regional</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Mohon pilih area/divisi
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="area" class="form-label fw-bold">Cabang/Dept</label>
+                        <select class="form-select select-cabang" id="cabang" data-placeholder="Pilih Cabang/Dept"
+                            required>
+                            <option></option>
+                            <option>Head Office</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Mohon pilih cabang/dept
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="join_date" class="form-label fw-bold">Tanggal Masuk</label>
+                        <input type="date" class="form-control border-0 bg-light" id="join_date" required>
+                        <div class="invalid-feedback">
+                            Mohon masukkan tanggal masuk
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="birth_date" class="form-label fw-bold">Tanggal Lahir</label>
+                        <input type="date" class="form-control border-0 bg-light" id="birth_date" required>
+                        <div class="invalid-feedback">
+                            Mohon masukkan tanggal lahir
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="photo" class="form-label fw-bold">Photo Profile</label>
+                        <input class="form-control form-control-sm" id="photo" type="file">
+                    </div>
+                    <button type="submit" data-bs-toggle="modal" data-bs-target="#modalRegister"
+                        class="btn btn-lg btn-primary text-white fs-6 mt-3 mb-3 col-12"
+                        style="border-radius: 8px;">Simpan</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<!-- CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- JS -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/menu.js"></script>
+
+<!-- CUSTOM JS -->
+<!-- Scroll Up -->
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 20) {
+                $('#toTopBtn').fadeIn();
+            } else {
+                $('#toTopBtn').fadeOut();
+            }
+        });
+
+        $('#toTopBtn').click(function () {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 300);
+            return false;
+        });
+    });
+</script>
+
+<!-- Select 2  Usage-->
+<script>
+    $('#area').select2({
+        theme: "bootstrap-5",
+        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+        placeholder: $(this).data('placeholder'),
+    });
+    $('#cabang').select2({
+        theme: "bootstrap-5",
+        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+        placeholder: $(this).data('placeholder'),
+    });
+    $('#jabatan').select2({
+        theme: "bootstrap-5",
+        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+        placeholder: $(this).data('placeholder'),
+    });
+</script>
+
+<!-- Validation -->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+
+</html>
