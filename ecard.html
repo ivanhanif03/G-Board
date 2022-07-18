@@ -26,11 +26,15 @@
             height: 35vw;
             object-fit: cover;
         }
+
+        .bg-image {
+            background-image: url('assets/img/pattern.png');
+        }
     </style>
 </head>
 
 <body>
-    <div class="container p-3 mb-5">
+    <div class="container vh-100 p-3 mb-5 bg-image">
         <!-- MENU -->
         <div class="row">
             <div class="col-12">
@@ -101,8 +105,18 @@
         <!-- E-CARD -->
         <div class="row">
             <div class="col-12">
-                <h5 class="fw-bolder">E-Card</h5>
-             
+                <h5 class="fw-bolder mb-4">E-Card</h5>
+                <div class="card w-100 bg-white border-0 shadow-lg p-3 mt-4 ecard_animation">
+                    <img style="height: 350px;" src="https://source.unsplash.com/300x300?manface   "
+                        class="card-img-top rounded-top">
+                    <div class="card-body rounded-bottom bg-warning text-center pb-3 pt-3">
+                        <h5 class="card-text fw-bold">Muhammad Ivan Hanif</h5>
+                        <h6><b>10090944</b></h6>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small>Learning Infrastructure Officer</small>
+                    </div>
+                </div>
             </div>
         </div>
         
