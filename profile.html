@@ -56,18 +56,22 @@
                         </button>
 
                         <button class="menu__item" style="--bgColorItem: #ffc107;">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <rect x="2" y="4" width="20" height="16" rx="2" />
-                                <path d="M7 15h0M2 9.5h20" />
-                            </svg>
+                            <a href="ecard.html">
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="M7 15h0M2 9.5h20" />
+                                </svg>
+                            </a>
                         </button>
 
                         <button class="menu__item" style="--bgColorItem: #ffc107;">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                            </svg>
+                            <a href="faq.html">
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                            </a>
                         </button>
 
                         <button class="menu__item" style="--bgColorItem:#ffc107;">
@@ -104,7 +108,7 @@
                     </div>
                     <div class="text-center">
                         <img class="img-fluid rounded-circle mt-3 mb-3" width="90"
-                            src="https:/source.unsplash.com/50x50?man" alt="">
+                            src="assets/img/user.png" alt="">
                         <div>
                             <b>Muhammad Ivan Hanif</b><br>
                             <small>Learning Infrastructure Officer</small>
@@ -211,25 +215,5 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/index.js"></script>
 <script src="assets/js/menu.js"></script>
-
-<!-- CUSTOM JS -->
-<script>
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 20) {
-                $('#toTopBtn').fadeIn();
-            } else {
-                $('#toTopBtn').fadeOut();
-            }
-        });
-
-        $('#toTopBtn').click(function () {
-            $("html, body").animate({
-                scrollTop: 0
-            }, 300);
-            return false;
-        });
-    });
-</script>
 
 </html>
